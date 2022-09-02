@@ -1,0 +1,111 @@
+Meera Malhotra
+meeram@bu.edu
+
+
+puzzles with 5-move optimal solutions
+-------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+random			 10			6.2			462.9
+BFS				 10			5    			47.1
+DFS (depth limit 20)	 10			16.2			19072.7
+DFS (depth limit 50)	 10			48.2			49043.0
+Greedy Search		 10			5.4			70.3
+A*				 10			5			6.5
+
+
+puzzles with 10-move optimal solutions
+-------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+random			10			15.8			16805.0
+BFS				10			10			747.4
+DFS (depth limit 20)	10			18.8			24858.0
+DFS (depth limit 50)	10			49.2			92287.3
+Greedy Search		10			97.6			7422.7
+A*				10			10			27.3
+
+puzzles with 15-move optimal solutions
+-------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+random			10			18.4			28683.5
+BFS				10			15			12672.0
+DFS (depth limit 20)	10			17.8			68659.0
+DFS (depth limit 50)	10			48.6			111406.0
+Greedy Search		 7			125.85		6486.71	
+A*				10			15			313.8
+
+Of the algorithms tested, A* appeared to be the best in terms of memory usage and time. It consistently used the least amount
+of states and the optimal moves to do so. This makes sense as it is an informed algorithm. The other informed algorithm, Greedy
+Search, varied in it's performance, and since it is not always complete, it tested a large amount and took up a lot of memory.
+The uninformed algorithms: random, BFS, and DFS, though effective in cases that were close to the goal case, could not keep up
+with the informed algorithms as the puzzles grew more complicated. And in the case of DFS, since it was going down the branching
+to retrieve the solution, as depth limit increased, it grew slower and took up lots of memory. BFS seemed to be the best of the 
+uninformed algorithms, as it used FIFO rather than LIFO, which was more efficient at solving the eight puzzles, but it still 
+used more memory than the most effective algorithm, A*.
+
+heuristic 2
+-----------
+This heuristic measures absolute value in distance between where the misplaced tiles are on the board
+being solved and the goal board by measuring the difference between the rows and columns.
+
+
+puzzles with 18-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)	8			145.75		8345.75
+Greedy (heuristic h2)	10			182.2			1783.0
+
+A* (heuristic h1)		10			18.0			1602.0
+A* (heuristic h2)		10			18.6			1178.2
+
+
+
+puzzles with 21-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)	5			104.6			4172.6
+Greedy (heuristic h2)	10			216.2			2427.8
+
+A* (heuristic h1)		10			21.0 			6301.7
+A* (heuristic h2)		10			22.8			1502.0
+
+
+puzzles with 24-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)	6			123.666		2856.166
+Greedy (heuristic h2)	9			225.555		5585.777
+
+A* (heuristic h1)		10			24.0			26948.9						
+A* (heuristic h2)		10			25.6			2962.6
+
+
+puzzles with 27-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)	4			197.5			4285.5
+Greedy (heuristic h2)	10			244.0			6781.5
+
+A* (heuristic h1)		0
+A* (heuristic h2)		10			29.0			15895.7
+
+
+The heuristic h1 with A* seemed to be more efficient in terms of moves puzzles that used fewer moves to be solved, 
+however h2 managed in a similar amount of moves with less memory. But as the puzzles grew more complicated,
+h2 began to become a much better heuristic because it used far less memory and time for close to the same amount of moves.
+With the Greedy algorithm, h2 alwats outperformed h1 in terms of solving the puzzles, though it tended to use more memory because
+of this fact. None of these heuristics were perfect, but h2 seemed to be the best for complicated puzzles in regard to memory and 
+move efficiency.
+
+
+
+
+
+
+
