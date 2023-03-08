@@ -4,11 +4,7 @@
 # A State class for the Eight Puzzle
 #
 # name: meera malhotra
-# email: meeram@bu.edu
 #
-# If you worked with a partner, put his or her contact info below:
-# partner's name:
-# partner's email:
 #
 
 from board import *
